@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 26: Health & Doctor Visit</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level B1</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 26 of 30</div>
+    <div class="sg-lesson-title">Health & Doctor Visit</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">Ich bin krank.</td><td class="phonetic">ICH bin krank</td><td>I am ill.</td><td><button class="sg-play-btn" onclick="sgSpeak('Ich bin krank.')">▶</button></td></tr>
+      <tr><td class="german">Ich habe Fieber.</td><td class="phonetic"></td><td>I have a fever.</td><td><button class="sg-play-btn" onclick="sgSpeak('Ich habe Fieber.')">▶</button></td></tr>
+      <tr><td class="german">Ich habe Schmerzen.</td><td class="phonetic"></td><td>I have pain.</td><td><button class="sg-play-btn" onclick="sgSpeak('Ich habe Schmerzen.')">▶</button></td></tr>
+      <tr><td class="german">der Arzt / die Ärztin</td><td class="phonetic">artst / ERTS-tin</td><td>doctor (m/f)</td><td><button class="sg-play-btn" onclick="sgSpeak('der Arzt / die Ärztin')">▶</button></td></tr>
+      <tr><td class="german">das Rezept</td><td class="phonetic">re-TSEPT</td><td>prescription</td><td><button class="sg-play-btn" onclick="sgSpeak('das Rezept')">▶</button></td></tr>
+      <tr><td class="german">die Apotheke</td><td class="phonetic">a-po-TAY-ke</td><td>pharmacy</td><td><button class="sg-play-btn" onclick="sgSpeak('die Apotheke')">▶</button></td></tr>
+      <tr><td class="german">der Krankenwagen</td><td class="phonetic">KRAN-ken-vah-gen</td><td>ambulance</td><td><button class="sg-play-btn" onclick="sgSpeak('der Krankenwagen')">▶</button></td></tr>
+      <tr><td class="german">allergisch gegen</td><td class="phonetic">a-LER-gish GAY-gen</td><td>allergic to</td><td><button class="sg-play-btn" onclick="sgSpeak('allergisch gegen')">▶</button></td></tr>
+      <tr><td class="german">Nehmen Sie…</td><td class="phonetic">NAY-men zee</td><td>Take…</td><td><button class="sg-play-btn" onclick="sgSpeak('Nehmen Sie…')">▶</button></td></tr>
+      <tr><td class="german">Wie lange schon?</td><td class="phonetic">vee LAN-ge shon</td><td>How long already?</td><td><button class="sg-play-btn" onclick="sgSpeak('Wie lange schon?')">▶</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+<h4>📖 Grammar: 'seit' (since / for)</h4><p>Use <strong>seit</strong> to say how long you have had a symptom:<br><em>Ich habe seit drei Tagen Kopfschmerzen.</em><br>(I have had a headache for three days.)<br>Note: German uses <strong>present tense</strong> + seit (not past tense like English).</p>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">What is 'die Apotheke'?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">hospital</button>
+        <button class="sg-choice" data-correct="false">doctor's office</button>
+        <button class="sg-choice" data-correct="true">pharmacy</button>
+        <button class="sg-choice" data-correct="false">ambulance</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">How do you say 'I have a fever'?</div>
+      <input class="sg-fill" id="fill2" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">Which correctly says 'I have had a cold for two days'?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">Ich hatte zwei Tage Erkältung.</button>
+        <button class="sg-choice" data-correct="true">Ich habe seit zwei Tagen eine Erkältung.</button>
+        <button class="sg-choice" data-correct="false">Ich bin seit zwei Tage krank.</button>
+        <button class="sg-choice" data-correct="false">Ich habe zwei Tage Erkältung gehabt.</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Ich habe seit zwei Tagen Fieber.</div>
+      <div class="sg-speak-translation">I have had a fever for two days.</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Ich habe seit zwei Tagen Fieber.')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Ich habe seit zwei Tagen Fieber.','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(26, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'Ich habe Fieber', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+  function startMic(phrase,btnId,resultId){
+    const btn=document.getElementById(btnId),res=document.getElementById(resultId);
+    btn.classList.add('listening');btn.textContent='🎙️ Listening…';
+    sgListen(r=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';const c=sgCheckPronunciation(r,phrase);res.innerHTML=c.pass?'✅ Great! ('+c.score+'%)':'❌ You said: "'+r[0]+'" — try again!';
+    },e=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';res.textContent='⚠️ '+e;});
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson27.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson25.html">← Lesson 25</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson27.html">Lesson 27 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

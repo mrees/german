@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 14: Shopping & Prices</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level A2</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 14 of 30</div>
+    <div class="sg-lesson-title">Shopping & Prices</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">Was kostet…?</td><td class="phonetic">vas KOS-tet</td><td>How much does … cost?</td><td><button class="sg-play-btn" onclick="sgSpeak('Was kostet…?')">▶</button></td></tr>
+      <tr><td class="german">Es kostet…</td><td class="phonetic">es KOS-tet</td><td>It costs…</td><td><button class="sg-play-btn" onclick="sgSpeak('Es kostet…')">▶</button></td></tr>
+      <tr><td class="german">das Geschäft</td><td class="phonetic">ghe-SHEFT</td><td>the shop</td><td><button class="sg-play-btn" onclick="sgSpeak('das Geschäft')">▶</button></td></tr>
+      <tr><td class="german">der Supermarkt</td><td class="phonetic">ZOO-per-markt</td><td>supermarket</td><td><button class="sg-play-btn" onclick="sgSpeak('der Supermarkt')">▶</button></td></tr>
+      <tr><td class="german">teuer</td><td class="phonetic">TOY-er</td><td>expensive</td><td><button class="sg-play-btn" onclick="sgSpeak('teuer')">▶</button></td></tr>
+      <tr><td class="german">billig</td><td class="phonetic">BIL-ig</td><td>cheap</td><td><button class="sg-play-btn" onclick="sgSpeak('billig')">▶</button></td></tr>
+      <tr><td class="german">der Euro</td><td class="phonetic">OY-ro</td><td>euro</td><td><button class="sg-play-btn" onclick="sgSpeak('der Euro')">▶</button></td></tr>
+      <tr><td class="german">die Quittung</td><td class="phonetic">KVIT-ung</td><td>receipt</td><td><button class="sg-play-btn" onclick="sgSpeak('die Quittung')">▶</button></td></tr>
+      <tr><td class="german">kaufen</td><td class="phonetic">KOW-fen</td><td>to buy</td><td><button class="sg-play-btn" onclick="sgSpeak('kaufen')">▶</button></td></tr>
+      <tr><td class="german">verkaufen</td><td class="phonetic">fer-KOW-fen</td><td>to sell</td><td><button class="sg-play-btn" onclick="sgSpeak('verkaufen')">▶</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+<h4>📖 Grammar: Prices</h4><p>Prices in German: <em>Es kostet fünf Euro.</em> (It costs 5 euros.)<br>Cents: <em>neunzig Cent</em> (90 cents)<br>Ask: <em>Haben Sie…?</em> (Do you have…?)<br>Say: <em>Ich nehme das.</em> (I'll take it.)</p>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">What does 'teuer' mean?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">cheap</button>
+        <button class="sg-choice" data-correct="false">free</button>
+        <button class="sg-choice" data-correct="true">expensive</button>
+        <button class="sg-choice" data-correct="false">sale</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">How do you ask the price?</div>
+      <input class="sg-fill" id="fill2" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">Which phrase means 'I'll take it'?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">Ich kaufe nicht.</button>
+        <button class="sg-choice" data-correct="true">Ich nehme das.</button>
+        <button class="sg-choice" data-correct="false">Das ist teuer.</button>
+        <button class="sg-choice" data-correct="false">Ich brauche das.</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Was kostet das Buch?</div>
+      <div class="sg-speak-translation">How much does the book cost?</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Was kostet das Buch?')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Was kostet das Buch?','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(14, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'Was kostet das', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+  function startMic(phrase,btnId,resultId){
+    const btn=document.getElementById(btnId),res=document.getElementById(resultId);
+    btn.classList.add('listening');btn.textContent='🎙️ Listening…';
+    sgListen(r=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';const c=sgCheckPronunciation(r,phrase);res.innerHTML=c.pass?'✅ Great! ('+c.score+'%)':'❌ You said: "'+r[0]+'" — try again!';
+    },e=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';res.textContent='⚠️ '+e;});
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson15.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson13.html">← Lesson 13</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson15.html">Lesson 15 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

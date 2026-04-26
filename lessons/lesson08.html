@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 8: Basic Verbs</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level A1</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 8 of 30</div>
+    <div class="sg-lesson-title">Basic Verbs</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">sein</td><td class="phonetic">zayn</td><td>to be</td><td><button class="sg-play-btn" onclick="sgSpeak('sein')">▶</button></td></tr>
+      <tr><td class="german">haben</td><td class="phonetic">HAH-ben</td><td>to have</td><td><button class="sg-play-btn" onclick="sgSpeak('haben')">▶</button></td></tr>
+      <tr><td class="german">machen</td><td class="phonetic">MAKH-en</td><td>to do/make</td><td><button class="sg-play-btn" onclick="sgSpeak('machen')">▶</button></td></tr>
+      <tr><td class="german">gehen</td><td class="phonetic">GAY-en</td><td>to go</td><td><button class="sg-play-btn" onclick="sgSpeak('gehen')">▶</button></td></tr>
+      <tr><td class="german">kommen</td><td class="phonetic">KOM-en</td><td>to come</td><td><button class="sg-play-btn" onclick="sgSpeak('kommen')">▶</button></td></tr>
+      <tr><td class="german">sehen</td><td class="phonetic">ZAY-en</td><td>to see</td><td><button class="sg-play-btn" onclick="sgSpeak('sehen')">▶</button></td></tr>
+      <tr><td class="german">essen</td><td class="phonetic">ES-en</td><td>to eat</td><td><button class="sg-play-btn" onclick="sgSpeak('essen')">▶</button></td></tr>
+      <tr><td class="german">trinken</td><td class="phonetic">TRIN-ken</td><td>to drink</td><td><button class="sg-play-btn" onclick="sgSpeak('trinken')">▶</button></td></tr>
+      <tr><td class="german">sprechen</td><td class="phonetic">SHPREKH-en</td><td>to speak</td><td><button class="sg-play-btn" onclick="sgSpeak('sprechen')">▶</button></td></tr>
+      <tr><td class="german">lernen</td><td class="phonetic">LERN-en</td><td>to learn</td><td><button class="sg-play-btn" onclick="sgSpeak('lernen')">▶</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+<h4>📖 Grammar: Present Tense of 'sein' (to be)</h4><table><tr><th>Pronoun</th><th>Form</th></tr><tr><td>ich</td><td>bin</td></tr><tr><td>du</td><td>bist</td></tr><tr><td>er/sie/es</td><td>ist</td></tr><tr><td>wir</td><td>sind</td></tr><tr><td>ihr</td><td>seid</td></tr><tr><td>Sie/sie</td><td>sind</td></tr></table>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">What does 'trinken' mean?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">to eat</button>
+        <button class="sg-choice" data-correct="false">to see</button>
+        <button class="sg-choice" data-correct="true">to drink</button>
+        <button class="sg-choice" data-correct="false">to go</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">How do you say 'I am' in German?</div>
+      <input class="sg-fill" id="fill2" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">Which is correct for 'We are students'?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">Wir bin Studenten.</button>
+        <button class="sg-choice" data-correct="true">Wir sind Studenten.</button>
+        <button class="sg-choice" data-correct="false">Wir seid Studenten.</button>
+        <button class="sg-choice" data-correct="false">Ich sind Studenten.</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Ich lerne Deutsch.</div>
+      <div class="sg-speak-translation">I am learning German.</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Ich lerne Deutsch.')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Ich lerne Deutsch.','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(8, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'ich bin', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+  function startMic(phrase,btnId,resultId){
+    const btn=document.getElementById(btnId),res=document.getElementById(resultId);
+    btn.classList.add('listening');btn.textContent='🎙️ Listening…';
+    sgListen(r=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';const c=sgCheckPronunciation(r,phrase);res.innerHTML=c.pass?'✅ Great! ('+c.score+'%)':'❌ You said: "'+r[0]+'" — try again!';
+    },e=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';res.textContent='⚠️ '+e;});
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson09.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson07.html">← Lesson 7</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson09.html">Lesson 9 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

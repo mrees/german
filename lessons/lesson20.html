@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 20: Adjectives & Descriptions</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level A2</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 20 of 30</div>
+    <div class="sg-lesson-title">Adjectives & Descriptions</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">groß</td><td class="phonetic">grohss</td><td>big/tall</td><td><button class="sg-play-btn" onclick="sgSpeak('groß')">▶</button></td></tr>
+      <tr><td class="german">klein</td><td class="phonetic">klayn</td><td>small</td><td><button class="sg-play-btn" onclick="sgSpeak('klein')">▶</button></td></tr>
+      <tr><td class="german">schön</td><td class="phonetic">shön</td><td>beautiful</td><td><button class="sg-play-btn" onclick="sgSpeak('schön')">▶</button></td></tr>
+      <tr><td class="german">alt</td><td class="phonetic">alt</td><td>old</td><td><button class="sg-play-btn" onclick="sgSpeak('alt')">▶</button></td></tr>
+      <tr><td class="german">jung</td><td class="phonetic">yung</td><td>young</td><td><button class="sg-play-btn" onclick="sgSpeak('jung')">▶</button></td></tr>
+      <tr><td class="german">schnell</td><td class="phonetic">shnel</td><td>fast</td><td><button class="sg-play-btn" onclick="sgSpeak('schnell')">▶</button></td></tr>
+      <tr><td class="german">langsam</td><td class="phonetic">LANG-zahm</td><td>slow</td><td><button class="sg-play-btn" onclick="sgSpeak('langsam')">▶</button></td></tr>
+      <tr><td class="german">laut</td><td class="phonetic">lowt</td><td>loud</td><td><button class="sg-play-btn" onclick="sgSpeak('laut')">▶</button></td></tr>
+      <tr><td class="german">leise</td><td class="phonetic">LY-ze</td><td>quiet</td><td><button class="sg-play-btn" onclick="sgSpeak('leise')">▶</button></td></tr>
+      <tr><td class="german">freundlich</td><td class="phonetic">FROYND-likh</td><td>friendly</td><td><button class="sg-play-btn" onclick="sgSpeak('freundlich')">▶</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+<h4>📖 Grammar: Adjective Position</h4><p><strong>After</strong> the verb (predicative): no ending needed.<br><em>Das Haus ist groß.</em> (The house is big.)<br><strong>Before</strong> the noun (attributive): endings added.<br><em>das große Haus</em> (the big house)<br><em>ein großes Haus</em> (a big house)</p>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">What does 'freundlich' mean?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">unfriendly</button>
+        <button class="sg-choice" data-correct="false">fast</button>
+        <button class="sg-choice" data-correct="true">friendly</button>
+        <button class="sg-choice" data-correct="false">loud</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">Translate: 'The house is big'</div>
+      <input class="sg-fill" id="fill2" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">Which sentence means 'The dog is small'?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="true">Der Hund ist klein.</button>
+        <button class="sg-choice" data-correct="false">Der Hund ist groß.</button>
+        <button class="sg-choice" data-correct="false">Die Hund ist klein.</button>
+        <button class="sg-choice" data-correct="false">Das Hund ist klein.</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Der Mann ist sehr freundlich.</div>
+      <div class="sg-speak-translation">The man is very friendly.</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Der Mann ist sehr freundlich.')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Der Mann ist sehr freundlich.','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(20, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'Das Haus ist groß', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+  function startMic(phrase,btnId,resultId){
+    const btn=document.getElementById(btnId),res=document.getElementById(resultId);
+    btn.classList.add('listening');btn.textContent='🎙️ Listening…';
+    sgListen(r=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';const c=sgCheckPronunciation(r,phrase);res.innerHTML=c.pass?'✅ Great! ('+c.score+'%)':'❌ You said: "'+r[0]+'" — try again!';
+    },e=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';res.textContent='⚠️ '+e;});
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson21.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson19.html">← Lesson 19</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson21.html">Lesson 21 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

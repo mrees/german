@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 16: Weather</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level A2</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 16 of 30</div>
+    <div class="sg-lesson-title">Weather</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">das Wetter</td><td class="phonetic">VET-er</td><td>the weather</td><td><button class="sg-play-btn" onclick="sgSpeak('das Wetter')">▶</button></td></tr>
+      <tr><td class="german">Es regnet.</td><td class="phonetic">es RAYG-net</td><td>It is raining.</td><td><button class="sg-play-btn" onclick="sgSpeak('Es regnet.')">▶</button></td></tr>
+      <tr><td class="german">Es schneit.</td><td class="phonetic">es SHNAYT</td><td>It is snowing.</td><td><button class="sg-play-btn" onclick="sgSpeak('Es schneit.')">▶</button></td></tr>
+      <tr><td class="german">Es ist sonnig.</td><td class="phonetic">es ist ZON-ig</td><td>It is sunny.</td><td><button class="sg-play-btn" onclick="sgSpeak('Es ist sonnig.')">▶</button></td></tr>
+      <tr><td class="german">Es ist bewölkt.</td><td class="phonetic">es ist be-VÖLKT</td><td>It is cloudy.</td><td><button class="sg-play-btn" onclick="sgSpeak('Es ist bewölkt.')">▶</button></td></tr>
+      <tr><td class="german">Es ist kalt.</td><td class="phonetic">es ist kalt</td><td>It is cold.</td><td><button class="sg-play-btn" onclick="sgSpeak('Es ist kalt.')">▶</button></td></tr>
+      <tr><td class="german">Es ist warm.</td><td class="phonetic">es ist varm</td><td>It is warm.</td><td><button class="sg-play-btn" onclick="sgSpeak('Es ist warm.')">▶</button></td></tr>
+      <tr><td class="german">der Regen</td><td class="phonetic">RAY-gen</td><td>rain</td><td><button class="sg-play-btn" onclick="sgSpeak('der Regen')">▶</button></td></tr>
+      <tr><td class="german">der Schnee</td><td class="phonetic">shnay</td><td>snow</td><td><button class="sg-play-btn" onclick="sgSpeak('der Schnee')">▶</button></td></tr>
+      <tr><td class="german">die Sonne</td><td class="phonetic">ZON-e</td><td>sun</td><td><button class="sg-play-btn" onclick="sgSpeak('die Sonne')">▶</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+<h4>📖 Grammar: Weather Sentences</h4><p>Weather in German uses <strong>es</strong> (it) as the subject:<br><em>Es regnet.</em> (It rains / is raining.)<br><em>Es ist heiß.</em> (It is hot.)<br>Ask: <em>Wie ist das Wetter heute?</em> (What is the weather today?)</p>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">What does 'Es schneit' mean?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">It is sunny</button>
+        <button class="sg-choice" data-correct="false">It is raining</button>
+        <button class="sg-choice" data-correct="true">It is snowing</button>
+        <button class="sg-choice" data-correct="false">It is windy</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">Translate: 'It is cold'</div>
+      <input class="sg-fill" id="fill2" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">How do you ask about the weather?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">Was ist das Wetter?</button>
+        <button class="sg-choice" data-correct="true">Wie ist das Wetter?</button>
+        <button class="sg-choice" data-correct="false">Wo ist das Wetter?</button>
+        <button class="sg-choice" data-correct="false">Wann ist das Wetter?</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Wie ist das Wetter heute?</div>
+      <div class="sg-speak-translation">What is the weather today?</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Wie ist das Wetter heute?')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Wie ist das Wetter heute?','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(16, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'Es ist kalt', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+  function startMic(phrase,btnId,resultId){
+    const btn=document.getElementById(btnId),res=document.getElementById(resultId);
+    btn.classList.add('listening');btn.textContent='🎙️ Listening…';
+    sgListen(r=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';const c=sgCheckPronunciation(r,phrase);res.innerHTML=c.pass?'✅ Great! ('+c.score+'%)':'❌ You said: "'+r[0]+'" — try again!';
+    },e=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';res.textContent='⚠️ '+e;});
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson17.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson15.html">← Lesson 15</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson17.html">Lesson 17 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 2: Numbers 1–20</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level A1</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 2 of 30</div>
+    <div class="sg-lesson-title">Numbers 1–20</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Numbers</div>
+    <table class="sg-vocab">
+      <tr><th>Number</th><th>German</th><th>Pronunciation</th><th></th></tr>
+      <tr><td>1</td><td class="german">eins</td><td class="phonetic">ayns</td><td><button class="sg-play-btn" onclick="sgSpeak('eins')">▶</button></td></tr>
+      <tr><td>2</td><td class="german">zwei</td><td class="phonetic">tsvay</td><td><button class="sg-play-btn" onclick="sgSpeak('zwei')">▶</button></td></tr>
+      <tr><td>3</td><td class="german">drei</td><td class="phonetic">dry</td><td><button class="sg-play-btn" onclick="sgSpeak('drei')">▶</button></td></tr>
+      <tr><td>4</td><td class="german">vier</td><td class="phonetic">feer</td><td><button class="sg-play-btn" onclick="sgSpeak('vier')">▶</button></td></tr>
+      <tr><td>5</td><td class="german">fünf</td><td class="phonetic">fünf</td><td><button class="sg-play-btn" onclick="sgSpeak('fünf')">▶</button></td></tr>
+      <tr><td>6</td><td class="german">sechs</td><td class="phonetic">zeks</td><td><button class="sg-play-btn" onclick="sgSpeak('sechs')">▶</button></td></tr>
+      <tr><td>7</td><td class="german">sieben</td><td class="phonetic">ZEE-ben</td><td><button class="sg-play-btn" onclick="sgSpeak('sieben')">▶</button></td></tr>
+      <tr><td>8</td><td class="german">acht</td><td class="phonetic">aht</td><td><button class="sg-play-btn" onclick="sgSpeak('acht')">▶</button></td></tr>
+      <tr><td>9</td><td class="german">neun</td><td class="phonetic">noyn</td><td><button class="sg-play-btn" onclick="sgSpeak('neun')">▶</button></td></tr>
+      <tr><td>10</td><td class="german">zehn</td><td class="phonetic">tsayn</td><td><button class="sg-play-btn" onclick="sgSpeak('zehn')">▶</button></td></tr>
+      <tr><td>11</td><td class="german">elf</td><td class="phonetic">elf</td><td><button class="sg-play-btn" onclick="sgSpeak('elf')">▶</button></td></tr>
+      <tr><td>12</td><td class="german">zwölf</td><td class="phonetic">tsvölf</td><td><button class="sg-play-btn" onclick="sgSpeak('zwölf')">▶</button></td></tr>
+      <tr><td>13</td><td class="german">dreizehn</td><td class="phonetic">DRY-tsayn</td><td><button class="sg-play-btn" onclick="sgSpeak('dreizehn')">▶</button></td></tr>
+      <tr><td>15</td><td class="german">fünfzehn</td><td class="phonetic">FÜNF-tsayn</td><td><button class="sg-play-btn" onclick="sgSpeak('fünfzehn')">▶</button></td></tr>
+      <tr><td>20</td><td class="german">zwanzig</td><td class="phonetic">TSVAN-tsig</td><td><button class="sg-play-btn" onclick="sgSpeak('zwanzig')">▶</button></td></tr>
+    </table>
+    <div style="margin-top:12px">
+      <button class="sg-btn sg-btn-audio" onclick="countUp()">🔊 Count 1→10</button>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+      <h4>📖 Grammar: Numbers Pattern</h4>
+      <ul>
+        <li>13–19: add <strong>-zehn</strong> (like English -teen): dreizehn, vierzehn, fünfzehn…</li>
+        <li>20 = zwanzig, 30 = dreißig, 40 = vierzig</li>
+        <li>21 = einundzwanzig (one-and-twenty — reversed!)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1 — What number is this?</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">Which number is <em>sieben</em>?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">6</button>
+        <button class="sg-choice" data-correct="true">7</button>
+        <button class="sg-choice" data-correct="false">8</button>
+        <button class="sg-choice" data-correct="false">17</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Type the German word</div>
+    <div class="sg-exercise">
+      <div class="sg-question">How do you write 12 in German?</div>
+      <input class="sg-fill" id="fill2" placeholder="Type the German word…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3 — Multiple choice</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">What does <em>zwanzig</em> mean?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">12</button>
+        <button class="sg-choice" data-correct="false">12</button>
+        <button class="sg-choice" data-correct="true">20</button>
+        <button class="sg-choice" data-correct="false">2</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">fünf</div>
+      <div class="sg-speak-translation">five</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('fünf')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('fünf','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(2, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'zwölf', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+
+  function countUp() {
+    const nums = ['eins','zwei','drei','vier','fünf','sechs','sieben','acht','neun','zehn'];
+    nums.forEach((n, i) => setTimeout(() => sgSpeak(n), i * 900));
+  }
+
+  function startMic(phrase, btnId, resultId) {
+    const btn = document.getElementById(btnId);
+    const res = document.getElementById(resultId);
+    btn.classList.add('listening'); btn.textContent = '🎙️ Listening…';
+    sgListen(
+      results => {
+        btn.classList.remove('listening'); btn.textContent = '🎤 Speak Now';
+        const check = sgCheckPronunciation(results, phrase);
+        res.innerHTML = check.pass ? '✅ Excellent! (' + check.score + '%)' : '❌ Try again — you said: "' + results[0] + '"';
+      },
+      err => { btn.classList.remove('listening'); btn.textContent = '🎤 Speak Now'; res.textContent = '⚠️ ' + err; }
+    );
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson03.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson01.html">← Lesson 1</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson03.html">Lesson 3 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

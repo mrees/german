@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 4: Family Members</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level A1</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 4 of 30</div>
+    <div class="sg-lesson-title">Family Members</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">die Mutter</td><td class="phonetic">MOO-ter</td><td>mother</td><td><button class="sg-play-btn" onclick="sgSpeak('die Mutter')">▶</button></td></tr>
+      <tr><td class="german">der Vater</td><td class="phonetic">FAH-ter</td><td>father</td><td><button class="sg-play-btn" onclick="sgSpeak('der Vater')">▶</button></td></tr>
+      <tr><td class="german">die Schwester</td><td class="phonetic">SHVES-ter</td><td>sister</td><td><button class="sg-play-btn" onclick="sgSpeak('die Schwester')">▶</button></td></tr>
+      <tr><td class="german">der Bruder</td><td class="phonetic">BROO-der</td><td>brother</td><td><button class="sg-play-btn" onclick="sgSpeak('der Bruder')">▶</button></td></tr>
+      <tr><td class="german">die Großmutter</td><td class="phonetic">GROHSS-moo-ter</td><td>grandmother</td><td><button class="sg-play-btn" onclick="sgSpeak('die Großmutter')">▶</button></td></tr>
+      <tr><td class="german">der Großvater</td><td class="phonetic">GROHSS-fah-ter</td><td>grandfather</td><td><button class="sg-play-btn" onclick="sgSpeak('der Großvater')">▶</button></td></tr>
+      <tr><td class="german">das Kind</td><td class="phonetic">kint</td><td>child</td><td><button class="sg-play-btn" onclick="sgSpeak('das Kind')">▶</button></td></tr>
+      <tr><td class="german">die Familie</td><td class="phonetic">fah-MEE-lee-eh</td><td>family</td><td><button class="sg-play-btn" onclick="sgSpeak('die Familie')">▶</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+<h4>📖 Grammar: Possessive Pronouns</h4><p>Use <strong>mein/meine</strong> (my) with family members:<br>mein Vater (m), meine Mutter (f), mein Kind (n).<br>The ending changes based on gender and case.</p>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">What does 'die Schwester' mean?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">brother</button>
+        <button class="sg-choice" data-correct="false">mother</button>
+        <button class="sg-choice" data-correct="true">sister</button>
+        <button class="sg-choice" data-correct="false">daughter</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">How do you say 'my father' in German (masculine)?</div>
+      <input class="sg-fill" id="fill2" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">Which is correct for 'my grandmother'?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">mein Großmutter</button>
+        <button class="sg-choice" data-correct="true">meine Großmutter</button>
+        <button class="sg-choice" data-correct="false">meine Großvater</button>
+        <button class="sg-choice" data-correct="false">meinen Großmutter</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Meine Mutter ist sehr nett.</div>
+      <div class="sg-speak-translation">My mother is very nice.</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Meine Mutter ist sehr nett.')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Meine Mutter ist sehr nett.','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(4, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'mein Vater', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+  function startMic(phrase,btnId,resultId){
+    const btn=document.getElementById(btnId),res=document.getElementById(resultId);
+    btn.classList.add('listening');btn.textContent='🎙️ Listening…';
+    sgListen(r=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';const c=sgCheckPronunciation(r,phrase);res.innerHTML=c.pass?'✅ Great! ('+c.score+'%)':'❌ You said: "'+r[0]+'" — try again!';
+    },e=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';res.textContent='⚠️ '+e;});
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson05.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson03.html">← Lesson 3</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson05.html">Lesson 5 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

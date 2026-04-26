@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 1: Greetings & Farewells</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level A1</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 1 of 30</div>
+    <div class="sg-lesson-title">Greetings & Farewells</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">Hallo</td><td class="phonetic">HAH-lo</td><td>Hello</td><td><button class="sg-play-btn" onclick="sgSpeak('Hallo')">▶ Play</button></td></tr>
+      <tr><td class="german">Guten Morgen</td><td class="phonetic">GOO-ten MOR-gen</td><td>Good morning</td><td><button class="sg-play-btn" onclick="sgSpeak('Guten Morgen')">▶ Play</button></td></tr>
+      <tr><td class="german">Guten Tag</td><td class="phonetic">GOO-ten TAHK</td><td>Good day</td><td><button class="sg-play-btn" onclick="sgSpeak('Guten Tag')">▶ Play</button></td></tr>
+      <tr><td class="german">Guten Abend</td><td class="phonetic">GOO-ten AH-bent</td><td>Good evening</td><td><button class="sg-play-btn" onclick="sgSpeak('Guten Abend')">▶ Play</button></td></tr>
+      <tr><td class="german">Tschüss</td><td class="phonetic">CHÜSS</td><td>Bye</td><td><button class="sg-play-btn" onclick="sgSpeak('Tschüss')">▶ Play</button></td></tr>
+      <tr><td class="german">Auf Wiedersehen</td><td class="phonetic">owf VEE-der-zayn</td><td>Goodbye (formal)</td><td><button class="sg-play-btn" onclick="sgSpeak('Auf Wiedersehen')">▶ Play</button></td></tr>
+      <tr><td class="german">Wie geht es Ihnen?</td><td class="phonetic">vee GAYT es EE-nen</td><td>How are you? (formal)</td><td><button class="sg-play-btn" onclick="sgSpeak('Wie geht es Ihnen?')">▶ Play</button></td></tr>
+      <tr><td class="german">Danke, gut</td><td class="phonetic">DAN-ke GOOT</td><td>Fine, thank you</td><td><button class="sg-play-btn" onclick="sgSpeak('Danke, gut')">▶ Play</button></td></tr>
+      <tr><td class="german">Bitte</td><td class="phonetic">BIT-te</td><td>Please / You're welcome</td><td><button class="sg-play-btn" onclick="sgSpeak('Bitte')">▶ Play</button></td></tr>
+      <tr><td class="german">Entschuldigung</td><td class="phonetic">ent-SHUL-di-gung</td><td>Excuse me / Sorry</td><td><button class="sg-play-btn" onclick="sgSpeak('Entschuldigung')">▶ Play</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+      <h4>📖 Grammar: Formal vs Informal</h4>
+      <p>German has <strong>two</strong> ways to say "you":</p>
+      <ul>
+        <li><strong>du</strong> — informal, for friends, family, children</li>
+        <li><strong>Sie</strong> (capital S) — formal, for strangers, bosses, older people</li>
+      </ul>
+      <p style="margin-top:8px">Example: <em>Wie geht es <strong>dir</strong>?</em> (informal) vs <em>Wie geht es <strong>Ihnen</strong>?</em> (formal)</p>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1 — Choose the correct answer</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">How do you say "Good morning" in German?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">Guten Abend</button>
+        <button class="sg-choice" data-correct="true">Guten Morgen</button>
+        <button class="sg-choice" data-correct="false">Tschüss</button>
+        <button class="sg-choice" data-correct="false">Auf Wiedersehen</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">Complete: "_______, gut!" (Fine, thank you)</div>
+      <input class="sg-fill" id="fill2" placeholder="Type the missing word…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3 — Translate</div>
+    <div class="sg-exercise">
+      <div class="sg-question">How do you say "Excuse me" in German?</div>
+      <input class="sg-fill" id="fill3" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill3-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill3-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice — Say it aloud!</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Guten Morgen!</div>
+      <div class="sg-speak-translation">Good morning!</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Guten Morgen')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Guten Morgen','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+    <div class="sg-speak-card" style="margin-top:14px">
+      <div class="sg-speak-phrase">Wie geht es Ihnen?</div>
+      <div class="sg-speak-translation">How are you? (formal)</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Wie geht es Ihnen?')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic2" onclick="startMic('Wie geht es Ihnen','mic2','mic2-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic2-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(1, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'danke', onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill3'), document.getElementById('fill3-btn'), document.getElementById('fill3-fb'),
+    { answer: 'entschuldigung', onDone: ok => lc.record(ok) });
+
+  function startMic(phrase, btnId, resultId) {
+    const btn = document.getElementById(btnId);
+    const res = document.getElementById(resultId);
+    btn.classList.add('listening');
+    btn.textContent = '🎙️ Listening…';
+    sgListen(
+      results => {
+        btn.classList.remove('listening'); btn.textContent = '🎤 Speak Now';
+        const check = sgCheckPronunciation(results, phrase);
+        res.innerHTML = check.pass
+          ? '✅ Great pronunciation! (' + check.score + '% match)'
+          : '❌ You said: "' + results[0] + '" — try again! (' + check.score + '% match)';
+      },
+      err => { btn.classList.remove('listening'); btn.textContent = '🎤 Speak Now'; res.textContent = '⚠️ ' + err; }
+    );
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson02.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson02.html">Lesson 2 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 19: Body Parts & Health</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level A2</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 19 of 30</div>
+    <div class="sg-lesson-title">Body Parts & Health</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">der Kopf</td><td class="phonetic">kopf</td><td>head</td><td><button class="sg-play-btn" onclick="sgSpeak('der Kopf')">▶</button></td></tr>
+      <tr><td class="german">der Arm</td><td class="phonetic">arm</td><td>arm</td><td><button class="sg-play-btn" onclick="sgSpeak('der Arm')">▶</button></td></tr>
+      <tr><td class="german">das Bein</td><td class="phonetic">bayn</td><td>leg</td><td><button class="sg-play-btn" onclick="sgSpeak('das Bein')">▶</button></td></tr>
+      <tr><td class="german">die Hand</td><td class="phonetic">hant</td><td>hand</td><td><button class="sg-play-btn" onclick="sgSpeak('die Hand')">▶</button></td></tr>
+      <tr><td class="german">der Fuß</td><td class="phonetic">foos</td><td>foot</td><td><button class="sg-play-btn" onclick="sgSpeak('der Fuß')">▶</button></td></tr>
+      <tr><td class="german">der Rücken</td><td class="phonetic">RÜ-ken</td><td>back</td><td><button class="sg-play-btn" onclick="sgSpeak('der Rücken')">▶</button></td></tr>
+      <tr><td class="german">der Bauch</td><td class="phonetic">bowkh</td><td>stomach</td><td><button class="sg-play-btn" onclick="sgSpeak('der Bauch')">▶</button></td></tr>
+      <tr><td class="german">Ich bin krank.</td><td class="phonetic">ICH bin krank</td><td>I am ill.</td><td><button class="sg-play-btn" onclick="sgSpeak('Ich bin krank.')">▶</button></td></tr>
+      <tr><td class="german">Ich habe Schmerzen.</td><td class="phonetic">ICH HAH-be SHMERTS-en</td><td>I have pain.</td><td><button class="sg-play-btn" onclick="sgSpeak('Ich habe Schmerzen.')">▶</button></td></tr>
+      <tr><td class="german">der Arzt</td><td class="phonetic">artst</td><td>doctor</td><td><button class="sg-play-btn" onclick="sgSpeak('der Arzt')">▶</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+<h4>📖 Grammar: Saying You Feel Ill</h4><p><em>Mir ist schlecht.</em> (I feel sick.)<br><em>Ich habe Kopfschmerzen.</em> (I have a headache.)<br><em>Ich habe Bauchschmerzen.</em> (I have a stomachache.)<br>Body part + <strong>-schmerzen</strong> = that body part hurts.</p>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">What is 'der Rücken'?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">arm</button>
+        <button class="sg-choice" data-correct="false">leg</button>
+        <button class="sg-choice" data-correct="true">back</button>
+        <button class="sg-choice" data-correct="false">head</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">How do you say 'I have pain'?</div>
+      <input class="sg-fill" id="fill2" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">Which means 'I have a headache'?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">Ich habe Beinschmerzen.</button>
+        <button class="sg-choice" data-correct="false">Ich habe Rückenschmerzen.</button>
+        <button class="sg-choice" data-correct="true">Ich habe Kopfschmerzen.</button>
+        <button class="sg-choice" data-correct="false">Ich habe Bauchschmerzen.</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Ich habe Kopfschmerzen.</div>
+      <div class="sg-speak-translation">I have a headache.</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Ich habe Kopfschmerzen.')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Ich habe Kopfschmerzen.','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(19, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'Ich habe Schmerzen', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+  function startMic(phrase,btnId,resultId){
+    const btn=document.getElementById(btnId),res=document.getElementById(resultId);
+    btn.classList.add('listening');btn.textContent='🎙️ Listening…';
+    sgListen(r=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';const c=sgCheckPronunciation(r,phrase);res.innerHTML=c.pass?'✅ Great! ('+c.score+'%)':'❌ You said: "'+r[0]+'" — try again!';
+    },e=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';res.textContent='⚠️ '+e;});
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson20.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson18.html">← Lesson 18</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson20.html">Lesson 20 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

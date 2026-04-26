@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Learn German</title>
+<link rel="stylesheet" href="speakgerman.css">
+<style>
+  .sg-suggest-banner {
+    background: #fffbe6;
+    border: 2px solid var(--warning);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 0.92rem;
+  }
+  .sg-suggest-banner strong { color: #b07700; }
+  .sg-suggest-links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .sg-suggest-links a {
+    background: var(--warning);
+    color: #5a3d00;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+  .sg-reset-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    border-radius: 8px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    margin-top: 12px;
+  }
+  .sg-reset-btn:hover { border-color: var(--danger); color: var(--danger); }
+</style>
+</head>
+<body>
+
+<nav class="sg-nav">
+  <span class="logo">Speak<span>German</span></span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-hero">
+  <h1>Speak<span>German</span></h1>
+  <p>30 daily lessons — vocabulary, grammar, speaking practice and pronunciation checks. Learn like Duolingo, entirely in your browser.</p>
+  <div class="sg-hero-stats">
+    <div class="sg-hero-stat"><div class="num" id="stat-done">0</div><div class="lbl">Lessons Done</div></div>
+    <div class="sg-hero-stat"><div class="num" id="stat-xp">0</div><div class="lbl">Total XP</div></div>
+    <div class="sg-hero-stat"><div class="num">30</div><div class="lbl">Total Lessons</div></div>
+  </div>
+</div>
+
+<div class="sg-index-wrap">
+
+  <!-- Suggestions -->
+  <div id="sg-suggestions" style="display:none" class="sg-suggest-banner">
+    <strong>📌 Suggested for Review</strong> — these lessons had lower scores or are incomplete:
+    <div class="sg-suggest-links" id="sg-suggest-links"></div>
+  </div>
+
+  <!-- Level A1 -->
+  <div class="sg-level-title">🟢 Level A1 — Absolute Beginner (Lessons 1–10)</div>
+  <div class="sg-grid" id="grid-a1"></div>
+
+  <!-- Level A2 -->
+  <div class="sg-level-title">🔵 Level A2 — Elementary (Lessons 11–20)</div>
+  <div class="sg-grid" id="grid-a2"></div>
+
+  <!-- Level B1 -->
+  <div class="sg-level-title">🟣 Level B1 — Pre-Intermediate (Lessons 21–30)</div>
+  <div class="sg-grid" id="grid-b1"></div>
+
+  <button class="sg-reset-btn" onclick="resetProgress()">🔄 Reset all progress</button>
+</div>
+
+<script src="speakgerman.js"></script>
+<script>
+const LESSONS = [
+  // A1
+  { n:1,  title:'Greetings & Farewells',     desc:'Hallo, Guten Morgen, Tschüss and more basic greetings.' },
+  { n:2,  title:'Numbers 1–20',              desc:'Count from eins to zwanzig. Essential for every situation.' },
+  { n:3,  title:'Colours & Shapes',          desc:'rot, blau, grün — describe the world around you.' },
+  { n:4,  title:'Family Members',            desc:'Mutter, Vater, Bruder — talk about your family.' },
+  { n:5,  title:'Days, Months & Seasons',    desc:'Montag bis Sonntag and all twelve months.' },
+  { n:6,  title:'Food & Drink',              desc:'Brot, Wasser, Kaffee — order and discuss food.' },
+  { n:7,  title:'German Articles (der/die/das)', desc:'Master the three German genders with key nouns.' },
+  { n:8,  title:'Basic Verbs',               desc:'sein, haben, machen, gehen — the most common verbs.' },
+  { n:9,  title:'Asking Questions',          desc:'Wer? Was? Wo? Wie? — form simple questions.' },
+  { n:10, title:'Introducing Yourself',      desc:'Ich heiße… Ich komme aus… Ich bin… years old.' },
+  // A2
+  { n:11, title:'Simple Sentences',          desc:'Subject-Verb-Object: build your first sentences.' },
+  { n:12, title:'Present Tense Conjugation', desc:'Ich lerne, du lernst, er lernt — regular verbs.' },
+  { n:13, title:'Directions & Places',       desc:'links, rechts, geradeaus — find your way around.' },
+  { n:14, title:'Shopping & Prices',         desc:'Was kostet…? Ich möchte… — buy things in German.' },
+  { n:15, title:'Telling the Time',          desc:'Wie spät ist es? Halb, Viertel — read the clock.' },
+  { n:16, title:'Weather',                   desc:'Es regnet, es schneit — describe German weather.' },
+  { n:17, title:'Home & Rooms',              desc:'Küche, Schlafzimmer, Wohnzimmer — your home.' },
+  { n:18, title:'Transport & Travel',        desc:'Zug, Bus, Auto — getting around Germany.' },
+  { n:19, title:'Body Parts & Health',       desc:'Kopf, Hand, Fuß and saying "I feel ill".' },
+  { n:20, title:'Adjectives & Descriptions', desc:'groß, klein, schön, alt — describe people & things.' },
+  // B1
+  { n:21, title:'Past Tense (Perfekt)',       desc:'Ich habe gegessen — talking about the past.' },
+  { n:22, title:'Modal Verbs',               desc:'können, müssen, wollen, dürfen — what you can/must do.' },
+  { n:23, title:'Opinions & Preferences',    desc:'Ich finde… Ich mag… Ich denke… — expressing views.' },
+  { n:24, title:'Travel & Accommodation',    desc:'Hotel, Zimmer reservieren — plan a German trip.' },
+  { n:25, title:'At the Restaurant',         desc:'Eine Tisch für zwei bitte — order a meal.' },
+  { n:26, title:'Health & Doctor Visit',     desc:'Ich habe Schmerzen — describe symptoms.' },
+  { n:27, title:'Hobbies & Free Time',       desc:'Lesen, Musik hören, Sport treiben — your hobbies.' },
+  { n:28, title:'Work & Professions',        desc:'Ich bin Lehrer/in — talk about your job.' },
+  { n:29, title:'German Culture & Customs',  desc:'Oktoberfest, Christmas markets, everyday customs.' },
+  { n:30, title:'Review & Conversation',     desc:'Final review of all topics. Free conversation practice.' },
+];
+
+function pad(n) { return String(n).padStart(2,'0'); }
+
+function renderGrid() {
+  const p = SG.loadProgress();
+  const suggests = SG.suggestRepeat();
+
+  ['a1','a2','b1'].forEach(level => {
+    const grid = document.getElementById('grid-' + level);
+    const range = level === 'a1' ? [1,10] : level === 'a2' ? [11,20] : [21,30];
+    grid.innerHTML = '';
+    LESSONS.filter(l => l.n >= range[0] && l.n <= range[1]).forEach(l => {
+      const ld = p[l.n] || {};
+      const done = ld.completed;
+      const isSuggest = suggests.includes(l.n);
+      const score = ld.score || 0;
+      const fillPct = done ? Math.min(100, score) : 0;
+      const badge = done ? '✅' : isSuggest ? '🔁' : '';
+      const cls = done ? 'sg-lesson-card completed' : isSuggest ? 'sg-lesson-card suggested' : 'sg-lesson-card';
+
+      grid.innerHTML += `
+        <a href="lessons/lesson${pad(l.n)}.html" class="${cls}">
+          <span class="card-badge">${badge}</span>
+          <div class="card-num">Lesson ${l.n}</div>
+          <div class="card-title">${l.title}</div>
+          <div class="card-desc">${l.desc}</div>
+          <div class="card-bar"><div class="card-bar-fill" style="width:${fillPct}%"></div></div>
+        </a>`;
+    });
+  });
+
+  // Stats
+  document.getElementById('stat-done').textContent = SG.completedCount();
+  document.getElementById('stat-xp').textContent = SG.totalXP();
+  document.getElementById('sg-xp').textContent = '⭐ ' + SG.totalXP() + ' XP';
+
+  // Suggestions banner
+  if (suggests.length > 0 && SG.completedCount() > 0) {
+    const banner = document.getElementById('sg-suggestions');
+    const links = document.getElementById('sg-suggest-links');
+    banner.style.display = 'block';
+    links.innerHTML = suggests.map(n => {
+      const l = LESSONS.find(x => x.n === n);
+      return `<a href="lessons/lesson${pad(n)}.html">Lesson ${n}: ${l ? l.title : ''}</a>`;
+    }).join('');
+  }
+}
+
+function resetProgress() {
+  if (confirm('Reset ALL lesson progress? This cannot be undone.')) {
+    localStorage.removeItem('sg_progress');
+    renderGrid();
+  }
+}
+
+renderGrid();
+</script>
+</body>
+</html>

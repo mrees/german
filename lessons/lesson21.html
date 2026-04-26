@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 21: Past Tense (Perfekt)</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level B1</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 21 of 30</div>
+    <div class="sg-lesson-title">Past Tense (Perfekt)</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">haben + Partizip</td><td class="phonetic"></td><td>have + past participle</td><td><button class="sg-play-btn" onclick="sgSpeak('haben + Partizip')">▶</button></td></tr>
+      <tr><td class="german">sein + Partizip</td><td class="phonetic"></td><td>be + past participle</td><td><button class="sg-play-btn" onclick="sgSpeak('sein + Partizip')">▶</button></td></tr>
+      <tr><td class="german">gegessen</td><td class="phonetic">ge-ES-en</td><td>eaten</td><td><button class="sg-play-btn" onclick="sgSpeak('gegessen')">▶</button></td></tr>
+      <tr><td class="german">getrunken</td><td class="phonetic">ge-TRUNK-en</td><td>drunk</td><td><button class="sg-play-btn" onclick="sgSpeak('getrunken')">▶</button></td></tr>
+      <tr><td class="german">gegangen</td><td class="phonetic">ge-GANG-en</td><td>gone</td><td><button class="sg-play-btn" onclick="sgSpeak('gegangen')">▶</button></td></tr>
+      <tr><td class="german">gekauft</td><td class="phonetic">ge-KOWFT</td><td>bought</td><td><button class="sg-play-btn" onclick="sgSpeak('gekauft')">▶</button></td></tr>
+      <tr><td class="german">gesehen</td><td class="phonetic">ge-ZAY-en</td><td>seen</td><td><button class="sg-play-btn" onclick="sgSpeak('gesehen')">▶</button></td></tr>
+      <tr><td class="german">gemacht</td><td class="phonetic">ge-MAKHT</td><td>done/made</td><td><button class="sg-play-btn" onclick="sgSpeak('gemacht')">▶</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+<h4>📖 Grammar: The Perfekt Tense</h4><p>German uses <em>Perfekt</em> for everyday past conversation:<br><strong>haben/sein + past participle</strong><br><em>Ich habe Brot gegessen.</em> (I ate bread.)<br><em>Ich bin nach Hause gegangen.</em> (I went home.)<br>Motion/change verbs use <strong>sein</strong>; most others use <strong>haben</strong>.<br>Regular participles: ge- + stem + -t: kaufen → <em>gekauft</em></p>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">Which auxiliary verb is used with movement verbs?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">haben</button>
+        <button class="sg-choice" data-correct="true">sein</button>
+        <button class="sg-choice" data-correct="false">werden</button>
+        <button class="sg-choice" data-correct="false">mögen</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">What is the past participle of 'kaufen'?</div>
+      <input class="sg-fill" id="fill2" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">Which is correct for 'I ate pizza'?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">Ich bin Pizza gegessen.</button>
+        <button class="sg-choice" data-correct="true">Ich habe Pizza gegessen.</button>
+        <button class="sg-choice" data-correct="false">Ich habe Pizza essen.</button>
+        <button class="sg-choice" data-correct="false">Ich hatte Pizza gegessen.</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Ich habe heute Kaffee getrunken.</div>
+      <div class="sg-speak-translation">I drank coffee today.</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Ich habe heute Kaffee getrunken.')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Ich habe heute Kaffee getrunken.','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(21, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'gekauft', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+  function startMic(phrase,btnId,resultId){
+    const btn=document.getElementById(btnId),res=document.getElementById(resultId);
+    btn.classList.add('listening');btn.textContent='🎙️ Listening…';
+    sgListen(r=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';const c=sgCheckPronunciation(r,phrase);res.innerHTML=c.pass?'✅ Great! ('+c.score+'%)':'❌ You said: "'+r[0]+'" — try again!';
+    },e=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';res.textContent='⚠️ '+e;});
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson22.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson20.html">← Lesson 20</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson22.html">Lesson 22 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

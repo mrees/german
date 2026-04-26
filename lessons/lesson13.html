@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 13: Directions & Places</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level A2</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 13 of 30</div>
+    <div class="sg-lesson-title">Directions & Places</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">links</td><td class="phonetic">links</td><td>left</td><td><button class="sg-play-btn" onclick="sgSpeak('links')">▶</button></td></tr>
+      <tr><td class="german">rechts</td><td class="phonetic">rekhts</td><td>right</td><td><button class="sg-play-btn" onclick="sgSpeak('rechts')">▶</button></td></tr>
+      <tr><td class="german">geradeaus</td><td class="phonetic">ge-RAH-de-ows</td><td>straight ahead</td><td><button class="sg-play-btn" onclick="sgSpeak('geradeaus')">▶</button></td></tr>
+      <tr><td class="german">die Straße</td><td class="phonetic">SHTRAHS-e</td><td>street</td><td><button class="sg-play-btn" onclick="sgSpeak('die Straße')">▶</button></td></tr>
+      <tr><td class="german">die Ampel</td><td class="phonetic">AM-pel</td><td>traffic light</td><td><button class="sg-play-btn" onclick="sgSpeak('die Ampel')">▶</button></td></tr>
+      <tr><td class="german">das Rathaus</td><td class="phonetic">RAHT-hows</td><td>town hall</td><td><button class="sg-play-btn" onclick="sgSpeak('das Rathaus')">▶</button></td></tr>
+      <tr><td class="german">der Bahnhof</td><td class="phonetic">BAHN-hof</td><td>train station</td><td><button class="sg-play-btn" onclick="sgSpeak('der Bahnhof')">▶</button></td></tr>
+      <tr><td class="german">weit von hier</td><td class="phonetic">vayt fon heer</td><td>far from here</td><td><button class="sg-play-btn" onclick="sgSpeak('weit von hier')">▶</button></td></tr>
+      <tr><td class="german">nah bei</td><td class="phonetic">nah by</td><td>close to</td><td><button class="sg-play-btn" onclick="sgSpeak('nah bei')">▶</button></td></tr>
+      <tr><td class="german">gegenüber</td><td class="phonetic">gay-gen-Ü-ber</td><td>opposite</td><td><button class="sg-play-btn" onclick="sgSpeak('gegenüber')">▶</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+<h4>📖 Grammar: Asking for Directions</h4><p><em>Entschuldigung, wo ist der Bahnhof?</em> (Where is the station?)<br><em>Biegen Sie links ab.</em> (Turn left — formal)<br><em>Gehen Sie geradeaus.</em> (Go straight ahead.)<br>Use <strong>Wie weit ist es?</strong> to ask how far something is.</p>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">What does 'geradeaus' mean?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">turn right</button>
+        <button class="sg-choice" data-correct="false">turn left</button>
+        <button class="sg-choice" data-correct="true">straight ahead</button>
+        <button class="sg-choice" data-correct="false">behind you</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">Translate: 'the train station'</div>
+      <input class="sg-fill" id="fill2" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">How do you ask 'Where is the town hall?'</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">Wie ist das Rathaus?</button>
+        <button class="sg-choice" data-correct="true">Wo ist das Rathaus?</button>
+        <button class="sg-choice" data-correct="false">Was ist das Rathaus?</button>
+        <button class="sg-choice" data-correct="false">Wann ist das Rathaus?</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Gehen Sie geradeaus, dann links.</div>
+      <div class="sg-speak-translation">Go straight ahead, then turn left.</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Gehen Sie geradeaus, dann links.')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Gehen Sie geradeaus, dann links.','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(13, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'der Bahnhof', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+  function startMic(phrase,btnId,resultId){
+    const btn=document.getElementById(btnId),res=document.getElementById(resultId);
+    btn.classList.add('listening');btn.textContent='🎙️ Listening…';
+    sgListen(r=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';const c=sgCheckPronunciation(r,phrase);res.innerHTML=c.pass?'✅ Great! ('+c.score+'%)':'❌ You said: "'+r[0]+'" — try again!';
+    },e=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';res.textContent='⚠️ '+e;});
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson14.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson12.html">← Lesson 12</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson14.html">Lesson 14 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

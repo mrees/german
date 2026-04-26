@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 18: Transport & Travel</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level A2</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 18 of 30</div>
+    <div class="sg-lesson-title">Transport & Travel</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">der Zug</td><td class="phonetic">tsook</td><td>train</td><td><button class="sg-play-btn" onclick="sgSpeak('der Zug')">▶</button></td></tr>
+      <tr><td class="german">der Bus</td><td class="phonetic">boos</td><td>bus</td><td><button class="sg-play-btn" onclick="sgSpeak('der Bus')">▶</button></td></tr>
+      <tr><td class="german">das Auto</td><td class="phonetic">OW-to</td><td>car</td><td><button class="sg-play-btn" onclick="sgSpeak('das Auto')">▶</button></td></tr>
+      <tr><td class="german">das Flugzeug</td><td class="phonetic">FLOOK-tsoyk</td><td>plane</td><td><button class="sg-play-btn" onclick="sgSpeak('das Flugzeug')">▶</button></td></tr>
+      <tr><td class="german">das Fahrrad</td><td class="phonetic">FAR-raht</td><td>bicycle</td><td><button class="sg-play-btn" onclick="sgSpeak('das Fahrrad')">▶</button></td></tr>
+      <tr><td class="german">der Bahnhof</td><td class="phonetic">BAHN-hof</td><td>train station</td><td><button class="sg-play-btn" onclick="sgSpeak('der Bahnhof')">▶</button></td></tr>
+      <tr><td class="german">das Ticket</td><td class="phonetic">TIK-et</td><td>ticket</td><td><button class="sg-play-btn" onclick="sgSpeak('das Ticket')">▶</button></td></tr>
+      <tr><td class="german">abfahren</td><td class="phonetic">AP-far-en</td><td>to depart</td><td><button class="sg-play-btn" onclick="sgSpeak('abfahren')">▶</button></td></tr>
+      <tr><td class="german">ankommen</td><td class="phonetic">AN-kom-en</td><td>to arrive</td><td><button class="sg-play-btn" onclick="sgSpeak('ankommen')">▶</button></td></tr>
+      <tr><td class="german">der Flughafen</td><td class="phonetic">FLOOK-hah-fen</td><td>airport</td><td><button class="sg-play-btn" onclick="sgSpeak('der Flughafen')">▶</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+<h4>📖 Grammar: Separable Verbs</h4><p>Some German verbs split in a sentence — the prefix goes to the end:<br><em>abfahren</em> → Der Zug <strong>fährt</strong> um 8 Uhr <strong>ab</strong>.<br><em>ankommen</em> → Wir <strong>kommen</strong> um 10 Uhr <strong>an</strong>.<br>This is common in travel vocabulary.</p>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">What is 'das Flugzeug'?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">train</button>
+        <button class="sg-choice" data-correct="false">bus</button>
+        <button class="sg-choice" data-correct="true">plane</button>
+        <button class="sg-choice" data-correct="false">ship</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">Translate: 'the train station'</div>
+      <input class="sg-fill" id="fill2" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">Which sentence has correct separable verb placement?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">Der Zug abfährt um acht.</button>
+        <button class="sg-choice" data-correct="false">Der Zug fährt ab um acht.</button>
+        <button class="sg-choice" data-correct="true">Der Zug fährt um acht ab.</button>
+        <button class="sg-choice" data-correct="false">Ab fährt der Zug um acht.</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Wann fährt der nächste Zug ab?</div>
+      <div class="sg-speak-translation">When does the next train depart?</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Wann fährt der nächste Zug ab?')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Wann fährt der nächste Zug ab?','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(18, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'der Bahnhof', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+  function startMic(phrase,btnId,resultId){
+    const btn=document.getElementById(btnId),res=document.getElementById(resultId);
+    btn.classList.add('listening');btn.textContent='🎙️ Listening…';
+    sgListen(r=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';const c=sgCheckPronunciation(r,phrase);res.innerHTML=c.pass?'✅ Great! ('+c.score+'%)':'❌ You said: "'+r[0]+'" — try again!';
+    },e=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';res.textContent='⚠️ '+e;});
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson19.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson17.html">← Lesson 17</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson19.html">Lesson 19 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

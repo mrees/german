@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 5: Days, Months & Seasons</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level A1</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 5 of 30</div>
+    <div class="sg-lesson-title">Days, Months & Seasons</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">Montag</td><td class="phonetic">MON-tahk</td><td>Monday</td><td><button class="sg-play-btn" onclick="sgSpeak('Montag')">▶</button></td></tr>
+      <tr><td class="german">Dienstag</td><td class="phonetic">DEENS-tahk</td><td>Tuesday</td><td><button class="sg-play-btn" onclick="sgSpeak('Dienstag')">▶</button></td></tr>
+      <tr><td class="german">Mittwoch</td><td class="phonetic">MIT-vokh</td><td>Wednesday</td><td><button class="sg-play-btn" onclick="sgSpeak('Mittwoch')">▶</button></td></tr>
+      <tr><td class="german">Donnerstag</td><td class="phonetic">DON-ners-tahk</td><td>Thursday</td><td><button class="sg-play-btn" onclick="sgSpeak('Donnerstag')">▶</button></td></tr>
+      <tr><td class="german">Freitag</td><td class="phonetic">FRY-tahk</td><td>Friday</td><td><button class="sg-play-btn" onclick="sgSpeak('Freitag')">▶</button></td></tr>
+      <tr><td class="german">Januar</td><td class="phonetic">YAN-oo-ar</td><td>January</td><td><button class="sg-play-btn" onclick="sgSpeak('Januar')">▶</button></td></tr>
+      <tr><td class="german">Juni</td><td class="phonetic">YOO-nee</td><td>June</td><td><button class="sg-play-btn" onclick="sgSpeak('Juni')">▶</button></td></tr>
+      <tr><td class="german">Dezember</td><td class="phonetic">deh-TSEM-ber</td><td>December</td><td><button class="sg-play-btn" onclick="sgSpeak('Dezember')">▶</button></td></tr>
+      <tr><td class="german">der Frühling</td><td class="phonetic">FRÜH-ling</td><td>spring</td><td><button class="sg-play-btn" onclick="sgSpeak('der Frühling')">▶</button></td></tr>
+      <tr><td class="german">der Sommer</td><td class="phonetic">ZOM-mer</td><td>summer</td><td><button class="sg-play-btn" onclick="sgSpeak('der Sommer')">▶</button></td></tr>
+      <tr><td class="german">der Herbst</td><td class="phonetic">hairbst</td><td>autumn</td><td><button class="sg-play-btn" onclick="sgSpeak('der Herbst')">▶</button></td></tr>
+      <tr><td class="german">der Winter</td><td class="phonetic">VIN-ter</td><td>winter</td><td><button class="sg-play-btn" onclick="sgSpeak('der Winter')">▶</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+<h4>📖 Grammar: Days and Months</h4><ul><li>Days are all <strong>masculine</strong>: der Montag, der Freitag…</li><li>Months are also masculine: der Januar, der März…</li><li>Use <em>am</em> for days: <em>am Montag</em> (on Monday)</li><li>Use <em>im</em> for months: <em>im Januar</em> (in January)</li></ul>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">Which day comes after Mittwoch?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">Dienstag</button>
+        <button class="sg-choice" data-correct="false">Freitag</button>
+        <button class="sg-choice" data-correct="true">Donnerstag</button>
+        <button class="sg-choice" data-correct="false">Montag</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">How do you say 'on Monday' in German?</div>
+      <input class="sg-fill" id="fill2" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">What does 'der Herbst' mean?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">spring</button>
+        <button class="sg-choice" data-correct="false">summer</button>
+        <button class="sg-choice" data-correct="true">autumn</button>
+        <button class="sg-choice" data-correct="false">winter</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Heute ist Montag.</div>
+      <div class="sg-speak-translation">Today is Monday.</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Heute ist Montag.')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Heute ist Montag.','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(5, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'am Montag', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+  function startMic(phrase,btnId,resultId){
+    const btn=document.getElementById(btnId),res=document.getElementById(resultId);
+    btn.classList.add('listening');btn.textContent='🎙️ Listening…';
+    sgListen(r=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';const c=sgCheckPronunciation(r,phrase);res.innerHTML=c.pass?'✅ Great! ('+c.score+'%)':'❌ You said: "'+r[0]+'" — try again!';
+    },e=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';res.textContent='⚠️ '+e;});
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson06.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson04.html">← Lesson 4</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson06.html">Lesson 6 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>

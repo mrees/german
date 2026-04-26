@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakGerman — Lesson 23: Opinions & Preferences</title>
+<link rel="stylesheet" href="../speakgerman.css">
+</head>
+<body>
+<nav class="sg-nav">
+  <span class="logo"><a href="../index.html" style="color:#fff;text-decoration:none">Speak<span style="color:#ffe14d">German</span></a></span>
+  <span style="font-size:0.8rem;opacity:0.85">Level B1</span>
+  <span id="sg-xp" class="sg-xp">⭐ 0 XP</span>
+</nav>
+
+<div class="sg-wrap">
+  <div class="sg-lesson-header">
+    <div class="sg-lesson-num">Lesson 23 of 30</div>
+    <div class="sg-lesson-title">Opinions & Preferences</div>
+  </div>
+
+  <div class="sg-progress-bar-outer">
+    <div class="sg-progress-bar-inner" id="sg-progress-fill" style="width:0%"></div>
+  </div>
+
+
+  <div class="sg-card">
+    <div class="sg-section-title">📚 Vocabulary</div>
+    <table class="sg-vocab">
+      <tr><th>German</th><th>Pronunciation</th><th>English</th><th></th></tr>
+      <tr><td class="german">Ich finde…</td><td class="phonetic">ICH FIN-de</td><td>I find / think…</td><td><button class="sg-play-btn" onclick="sgSpeak('Ich finde…')">▶</button></td></tr>
+      <tr><td class="german">Ich mag…</td><td class="phonetic">ICH mahk</td><td>I like…</td><td><button class="sg-play-btn" onclick="sgSpeak('Ich mag…')">▶</button></td></tr>
+      <tr><td class="german">Ich mag … nicht</td><td class="phonetic"></td><td>I don't like…</td><td><button class="sg-play-btn" onclick="sgSpeak('Ich mag … nicht')">▶</button></td></tr>
+      <tr><td class="german">Ich denke, dass…</td><td class="phonetic">ICH DEN-ke das</td><td>I think that…</td><td><button class="sg-play-btn" onclick="sgSpeak('Ich denke, dass…')">▶</button></td></tr>
+      <tr><td class="german">Meiner Meinung nach…</td><td class="phonetic">MY-ner MY-nung nakh</td><td>In my opinion…</td><td><button class="sg-play-btn" onclick="sgSpeak('Meiner Meinung nach…')">▶</button></td></tr>
+      <tr><td class="german">Das gefällt mir.</td><td class="phonetic">das ge-FÄLT meer</td><td>I like that. (lit: it pleases me)</td><td><button class="sg-play-btn" onclick="sgSpeak('Das gefällt mir.')">▶</button></td></tr>
+    </table>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-grammar">
+<h4>📖 Grammar: Saying Opinions with 'dass'</h4><p>After <em>ich denke, dass</em> the verb goes to the END:<br><em>Ich denke, dass Deutsch schwer <strong>ist</strong>.</em><br><em>Ich glaube, dass er Recht <strong>hat</strong>.</em><br>This is called a <strong>subordinate clause</strong> — the verb always comes last.</p>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 1</div>
+    <div class="sg-exercise" id="ex1">
+      <div class="sg-question">What does 'Meiner Meinung nach' mean?</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">I think</button>
+        <button class="sg-choice" data-correct="false">I know</button>
+        <button class="sg-choice" data-correct="true">In my opinion</button>
+        <button class="sg-choice" data-correct="false">I prefer</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 2 — Fill in the blank</div>
+    <div class="sg-exercise">
+      <div class="sg-question">Translate: 'I like music'</div>
+      <input class="sg-fill" id="fill2" placeholder="Type in German…" autocomplete="off">
+      <div class="sg-btn-row"><button class="sg-btn sg-btn-primary" id="fill2-btn">Check ✓</button></div>
+      <div class="sg-feedback" id="fill2-fb"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">✏️ Exercise 3</div>
+    <div class="sg-exercise" id="ex3">
+      <div class="sg-question">Which is correct? 'I think that German is interesting.'</div>
+      <div class="sg-choices">
+        <button class="sg-choice" data-correct="false">Ich denke, dass ist Deutsch interessant.</button>
+        <button class="sg-choice" data-correct="true">Ich denke, dass Deutsch interessant ist.</button>
+        <button class="sg-choice" data-correct="false">Ich denke Deutsch ist interessant dass.</button>
+        <button class="sg-choice" data-correct="false">Deutsch interessant ist, ich denke.</button>
+      </div>
+      <div class="sg-feedback"></div>
+    </div>
+  </div>
+
+  <div class="sg-card">
+    <div class="sg-section-title">🎤 Speaking Practice</div>
+    <div class="sg-speak-card">
+      <div class="sg-speak-phrase">Ich finde Deutsch sehr interessant.</div>
+      <div class="sg-speak-translation">I find German very interesting.</div>
+      <button class="sg-btn sg-btn-audio" style="margin-bottom:10px" onclick="sgSpeak('Ich finde Deutsch sehr interessant.')">🔊 Hear it</button><br>
+      <button class="sg-mic-btn" id="mic1" onclick="startMic('Ich finde Deutsch sehr interessant.','mic1','mic1-result')">🎤 Speak Now</button>
+      <div class="sg-mic-result" id="mic1-result"></div>
+    </div>
+  </div>
+
+  <script>
+  const lc = new LessonController(23, 3);
+  sgMultiChoice(document.getElementById('ex1'), { onDone: ok => lc.record(ok) });
+  sgFillBlank(document.getElementById('fill2'), document.getElementById('fill2-btn'), document.getElementById('fill2-fb'),
+    { answer: 'Ich mag Musik', onDone: ok => lc.record(ok) });
+  sgMultiChoice(document.getElementById('ex3'), { onDone: ok => lc.record(ok) });
+  function startMic(phrase,btnId,resultId){
+    const btn=document.getElementById(btnId),res=document.getElementById(resultId);
+    btn.classList.add('listening');btn.textContent='🎙️ Listening…';
+    sgListen(r=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';const c=sgCheckPronunciation(r,phrase);res.innerHTML=c.pass?'✅ Great! ('+c.score+'%)':'❌ You said: "'+r[0]+'" — try again!';
+    },e=>{btn.classList.remove('listening');btn.textContent='🎤 Speak Now';res.textContent='⚠️ '+e;});
+  }
+  </script>
+
+
+  <!-- Completion Panel -->
+  <div class="sg-card" id="sg-complete" style="display:none">
+    <div class="sg-score-panel">
+      <div class="sg-score-title">Lesson Complete! 🎉</div>
+      <div class="sg-score-stars" id="sg-score-stars">⭐⭐⭐</div>
+      <div class="sg-score-text" id="sg-score-pct"></div>
+      <div class="sg-score-text" id="sg-score-xp"></div>
+      <div class="sg-btn-row" style="justify-content:center;margin-top:16px">
+        <a href="../index.html" class="sg-btn sg-btn-secondary">🏠 Home</a>
+        <a href="lesson24.html" class="sg-btn sg-btn-primary">Next Lesson →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:20px;font-size:0.9rem">
+    <a href="lesson22.html">← Lesson 22</a>
+    <a href="../index.html">🏠 All Lessons</a>
+    <a href="lesson24.html">Lesson 24 →</a>
+  </div>
+</div>
+
+<script src="../speakgerman.js"></script>
+<script>
+SG.updateXPDisplay();
+</script>
+</body>
+</html>
